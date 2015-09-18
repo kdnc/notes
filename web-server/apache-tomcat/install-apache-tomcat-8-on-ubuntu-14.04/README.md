@@ -137,17 +137,17 @@ Open in web browser:
     
 You will see something like the following image
 
-[![SplashScreen](https://assets.digitalocean.com/articles/tomcat8_ubuntu/splashscreen.png)](https://gitter.im/nodejs/node?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![SplashScreen](https://assets.digitalocean.com/articles/tomcat8_ubuntu/splashscreen.png)]
 
 Let's take a look at the Manager App, accessible via the link or http://`server_IP_address`:8080/manager/html:
 
-[2]: https://assets.digitalocean.com/articles/tomcat8_ubuntu/manager.png (hover text)
+[![Manager](https://assets.digitalocean.com/articles/tomcat8_ubuntu/manager.png)]
 
 The Web Application Manager is used to manage your Java applications. You can Start, Stop, Reload, Deploy, and Undeploy here. You can also run some diagnostics on your apps (i.e. find memory leaks).
 
 Now let's take a look at the Host Manager, accessible via the link or http://`server_IP_address`:8080/host-manager/html/
 
-[2]: https://assets.digitalocean.com/articles/tomcat8_ubuntu/host-manager.png (hover text)
+[![HostManager](https://assets.digitalocean.com/articles/tomcat8_ubuntu/host-manager.png)]
 
 From the Virtual Host Manager page, you can add virtual hosts to serve your applications from.
 
