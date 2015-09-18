@@ -137,7 +137,7 @@ Open in web browser:
     
 You will see something like the following image
 
-[![SplashScreen](https://assets.digitalocean.com/articles/tomcat8_ubuntu/splashscreen.png)](https://gitter.im/nodejs/node?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[2]: https://assets.digitalocean.com/articles/tomcat8_ubuntu/splashscreen.png (hover text)
 
 Let's take a look at the Manager App, accessible via the link or http://`server_IP_address`:8080/manager/html:
 
