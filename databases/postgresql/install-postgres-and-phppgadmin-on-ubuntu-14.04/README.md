@@ -44,6 +44,13 @@ You need to configure apache for phpPgAdmin. Move phppgadmin file in to the `/et
     sudo a2enconf phppgadmin
     sudo service apache2 reload
 
+Edit the file `/etc/apache2/conf-available/phppgadmin.conf` with nano by typing:
+
+    cd /etc/apache2/conf-available/
+    nano phppgadmin.conf
+    
+Comment out the line `#Require local` by adding a # in front of the line and add below the line `allow from all` so that you can access from your browser.
+
 [![apache2-configuration](https://www.howtoforge.com/images/postgresql-ubuntu-1504/2.png)]
 
 ## Configure phpPgAdmin
