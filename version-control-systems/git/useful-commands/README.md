@@ -1,14 +1,7 @@
 # Git Useful Commands
 
-## Table of Contents
-**[Push an existing project to github](#push-an-existing-project-to-github)** 
-**[Add files to the commit](#add-files-to-the-commit)** 
-**[Commit to the git](#commit-to-the-git)** 
-**[Push the code to the repository](#push-the-code-to-the-repository)** 
-**[Remote Urls](#remote-urls)** 
-**[Show status](#show-status)** 
-**[Reverts uncommited changes](#reverts-uncommited-changes)** 
-**[Configure git](#configure-git)** 
+## Table of Content
+[TOC]
 
 
 ## Push an existing project to github
@@ -17,12 +10,14 @@
 * cd from terminal into the project directory
 * Initialize the project
 
+
     touch README.md
     git init
     touch .gitignore
 
 * Update the .gitignore file by adding files and folders to ignore
 * Push the code to the github.
+
 
     git status
     git add .
