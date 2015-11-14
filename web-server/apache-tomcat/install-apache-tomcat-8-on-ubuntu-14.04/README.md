@@ -111,6 +111,8 @@ Open in web browser:
     
 ## Configure Tomcat Web Management Interface
 
+[Watch Video - Setup Apache Tomcat users](https://www.youtube.com/watch?v=xWXCcw3XVp4)
+
 In order to use the manager webapp that comes with Tomcat, we must add a login to our Tomcat server. We will do this by editing the tomcat-users.xml file:
 
     sudo nano /opt/tomcat/conf/tomcat-users.xml
