@@ -25,3 +25,4 @@ References
 
 - <http://stackoverflow.com/questions/777562/moving-from-eclipse-to-visual-studio-2008>
 - <http://visualstudioshortcuts.com/2015/>
+- <http://www.dofactory.com/reference/visual-studio-shortcuts>
