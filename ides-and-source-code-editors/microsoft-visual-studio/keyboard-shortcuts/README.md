@@ -1,3 +1,12 @@
+# My Customized Visual Studio Keyboard Shortcuts using Resharper
+
+|    Command      	   							| 	Shortcut Key  	                 |
+| ----------------------------------------------|-----------------------------------:|
+|   Resharper.Resharper_GotoType            	|    Ctrl+Enter                      |
+|   Resharper.Resharper_GotoFileMember			|    Ctrl+O             			 |
+|   Resharper.Resharper_GotoLastEditLocation	|    Alt+Left Arrow                  |
+
+
 # Microsoft Visual Studio Keyboard Shortcuts
 
 |    Command      	   | 	Shortcut Key  	                  |
