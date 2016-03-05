@@ -5,6 +5,7 @@
 |   Resharper.Resharper_GotoType            	|    Ctrl+Enter                      |
 |   Resharper.Resharper_GotoFileMember			|    Ctrl+O             			 |
 |   Resharper.Resharper_GotoLastEditLocation	|    Alt+Left Arrow                  |
+|   Resharper.Resharper_LineComment				|    Ctrl+/             			 |
 
 
 # Microsoft Visual Studio Keyboard Shortcuts
