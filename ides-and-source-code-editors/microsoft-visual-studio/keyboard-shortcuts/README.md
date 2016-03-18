@@ -6,13 +6,14 @@
 |   Resharper.Resharper_GotoFileMember			|    Ctrl+O             			 |
 |   Resharper.Resharper_GotoLastEditLocation	|    Alt+Left Arrow                  |
 |   Resharper.Resharper_LineComment				|    Ctrl+/             			 |
+|   Edit.LineCut (Delete line)           |    Ctrl+D                   |
 
 
 # Microsoft Visual Studio Keyboard Shortcuts
 
 |    Command      	   | 	Shortcut Key  	                  |
 | -------------------- |-----------------------------------:|
-|   Delete line        |    Ctrl-L                          |
+|   Edit.LineCut (Delete line)        |    Ctrl-L                          |
 |   Comment line       |    Ctrl-K-C                        |
 |   Uncomment line     |    Ctrl-K-U                        |
 |   Toggle editor tabs |    Ctrl-F6                         |
