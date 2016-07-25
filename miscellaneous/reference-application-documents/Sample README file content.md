@@ -8,6 +8,8 @@
 
 ## Resource location
 
+Resource - [Lynda] C# Essential Training (Dec 18, 2014) \ 09 Working with Inheritance & Polymorphism \ 188207_09_02_XR15_inherit.mp4
+
 Repository URL - [https://github.com/martijnboland/VSReact](https://github.com/martijnboland/VSReact)
 
 ## Overview
