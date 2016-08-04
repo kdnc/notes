@@ -34,3 +34,39 @@ Repository URL - [https://github.com/martijnboland/VSReact](https://github.com/m
 
 1. Open the .sln file with Visual Studio 2015
 2. Hit F5
+
+---
+
+1. To run node versions, open a node command prompt and `cd` into the particular design pattern folder location
+2. Run following command
+
+    	node main.js
+
+3. To run angular versions, `cd` into the particular design pattern folder location
+4. Spawn a server on the current location and look it in the browser 
+
+---
+1. `cd` into the project root folder where package.json file is located.
+2. Install node modules
+
+		npm install
+		npm install nodemon -g
+
+4. Compile typescript code if any .ts files available. This would compile the .ts files to .js files in the `build\` folder
+
+		npm run tsc
+
+6. Start the server 
+	
+	- In dev mode
+		
+			npm run dev
+
+	- In production mode
+		
+			npm run start
+
+
+5. Run `karma` tests
+
+		npm run test
