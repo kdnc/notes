@@ -8,21 +8,21 @@
 
 #### Q - What does STRIDE stands for?
 
-- S for Spoofing of user identity
-- T for Tampering
-- R for Repudiation
-- I for Information disclosure (privacy breach or data leak)
-- D for Denial of service (D.o.S)
-- E for Elevation of privilege
+- S for Spoofing of user identity.
+- T for Tampering.
+- R for Repudiation.
+- I for Information disclosure (privacy breach or data leak).
+- D for Denial of service (DOS).
+- E for Elevation of privilege.
 
 #### Q - What are the security property violated with each threat in STRIDE?
 
-- Spoofing violates Authenticity
-- Tampering violates Integrity
-- Repudiation violates Non-repudiability
-- Information disclosure violates Confidentiality
-- Denial of Service violates Availability
-- Elevation of Privilege violates Authorization
+- Spoofing violates Authenticity.
+- Tampering violates Integrity.
+- Repudiation violates Non-repudiability.
+- Information disclosure violates Confidentiality.
+- Denial of Service violates Availability.
+- Elevation of Privilege violates Authorization.
 
 ## Anti-forgery
 
