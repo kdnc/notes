@@ -1,13 +1,56 @@
 ## React Architecture
 
+#### Q - What is React?
+- React is a front-end JavaScript library developed by Facebook in 2011.
+- It follows the component based approach which helps in building reusable UI components.
+- It is used for developing complex and interactive web and mobile UI.
+- Even though it was open-sourced only in 2015, it has one of the largest communities supporting it.
+#### Q - What are the features of React?
+- It uses the virtual DOM instead of the real DOM.
+- It uses server-side rendering.
+- It follows uni-directional data flow or data binding.
+#### Q - What are the advantages of using React?
+- It increases the application’s performance
+- It can be conveniently used on the client as well as server side.  This enables improved SEO and performance.
+- Because of JSX, code’s readability increases. It is also really easy to see the layout, or how components are plugged/combined with each other.
+- React is easy to integrate with other frameworks like Meteor, Angular, etc as it is only a view layer.
+- Using React, writing UI test cases become extremely easy
+#### Q - What are the limitations of React?
+- React is just a library, not a full-blown framework
+- Its library is very large and takes time to understand
+- Coding gets complex as it uses inline templating and JSX
 #### Q - How does React work?
 React creates a virtual DOM. When state changes in a component it firstly runs a "diffing" algorithm, which identifies what has changed in the virtual DOM. The second step is reconciliation, where it updates the DOM with the results of diff.
-#### Q - What are the advantages of using React?
-It is easy to know how a component is rendered, you just need to look at the render function.
-JSX makes it easy to read the code of your components. It is also really easy to see the layout, or how components are plugged/combined with each other.
-You can render React on the server-side. This enables improves SEO and performance.
-It is easy to test.
-You can use React with any framework (Backbone.js, Angular.js) as it is only a view layer.
+#### Q - What do you understand by Virtual DOM? Explain its working.
+- A virtual DOM is a lightweight JavaScript object which originally is just the copy of the real DOM. It is a node tree that lists the elements, their attributes and content as Objects and their properties.
+- React’s render function creates a node tree out of the React components. It then updates this tree in response to the mutations in the data model which is caused by various actions done by the user or by the system.
+- This Virtual DOM works in three simple steps.
+    1. Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.
+
+        ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/08/1dom-492x180.png)
+
+    2. Then it runs a "diffing" algorithm, which identifies the difference between the previous DOM representation and the new one.
+
+        ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/08/2dom-430x180.png)
+    3. Next step is reconciliation which is that the real DOM will be updated with only the things that have actually changed.
+
+        ![](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/08/3dom-209x180.png)
+
+
+#### Q - Differentiate between Real DOM and Virtual DOM.
+Real DOM
+- It updates slow.
+- Can directly update HTML.
+- Creates a new DOM if element updates.
+- DOM manipulation is very expensive.
+- Too much of memory wastage.
+
+Virtual DOM
+- It updates faster.
+- Can’t directly update HTML.
+- Updates the JSX if element updates.
+- DOM manipulation is very easy.
+- No memory wastage.
 
 Create-react-app
 
@@ -61,7 +104,20 @@ There are a number of methods available in the React API to work with this child
 ## JSX
 
 #### Q - What is JSX?
-JSX is a syntax extension to JavaScript and comes with the full power of JavaScript. JSX produces React "elements". You can embed any JavaScript expression in JSX by wrapping it in curly braces. After compilation, JSX expressions become regular JavaScript objects. This means that you can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions
+- JSX is a shorthand for JavaScript XML.
+- This is a type of file used by React which utilizes the expressiveness of JavaScript along with HTML like template syntax. This makes the HTML file really easy to understand. 
+- You can embed any JavaScript expression in JSX by wrapping it in curly braces.
+- JSX produces React "elements". After compilation, JSX expressions become regular JavaScript objects.
+- You can use JSX inside of if statements and for loops, assign it to variables, accept it as arguments, and return it from functions.
+    ```javascript
+    render(){
+        return(        
+            <div>
+                <h1> Hello World from Edureka!!</h1>
+            </div>
+        );
+    }
+    ```
 
 ## Ref
 
