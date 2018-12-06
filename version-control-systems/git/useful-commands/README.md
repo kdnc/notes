@@ -52,6 +52,8 @@ Reference - <https://help.github.com/articles/adding-an-existing-project-to-gith
 
 ## Push the code to the repository
 
+### Push code with configured credentials
+
     git push -u origin master
 
 If this command did not work and says to issue the –set-upstream command then issue the following command
@@ -59,6 +61,10 @@ If this command did not work and says to issue the –set-upstream command then 
     git push --set-upstream origin master
 
 Reference - <http://stackoverflow.com/questions/10032964/git-push-fatal-no-configured-push-destination>
+
+### Push code with manually defining credentials
+
+    git push https://username:password@github.com/kdnc/angular-reference-application.git --all 
 
 ## Remote Urls
 
