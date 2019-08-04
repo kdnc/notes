@@ -149,3 +149,127 @@ Redux thunk is middleware that allows you to write action creators that return a
 
 #### Q - When rendering a list what is a key and what is its purpose?
 Keys help React identify which items have changed, are added, or are removed. Keys should be given to the elements inside the array to give the elements a stable identity. The best way to pick a key is to use a string that uniquely identifies a list item among its siblings. Most often you would use IDs from your data as keys. When you don't have stable IDs for rendered items, you may use the item index as a key as a last resort. It is not recommend to use indexes for keys if the items can reorder, as that would be slow.
+
+
+## Linting
+
+### Prettier
+
+#### Prettier configuration
+* Create a .prettierrc file in the root of the project
+* Reference -  https://prettier.io/docs/en/configuration.html
+
+
+#### Sample prettier rules for a React project
+```json
+{
+  "singleQuote": true,
+  "arrowParens": "always",
+  "printWidth": 100
+}
+```
+* Reference - https://prettier.io/docs/en/options.html
+* `arrowParens` - Include parentheses around a sole arrow function parameter.
+    * Reference - https://github.com/prettier/prettier/pull/3324
+* `singleQuote` - Use single quotes instead of double quotes.
+
+---
+
+## Testing
+
+### Mocking fetch with Jest
+
+```jsx harmony
+import { mount } from 'enzyme';
+
+import ExampleComponent from './ExampleComponent';
+
+jest.mock('../../../../services/api/index.js', () => ({
+  serviceConnector: (apiName) => {
+    const response = {
+      getUsers: {
+        status: 'SUCCESS',
+        users: [
+          {
+            id: 1,
+            name: 'User 1'
+          },
+          {
+            id: 2,
+            name: 'User 2'
+          }
+        ]
+      },
+      getOrders: {
+        orders: [
+          {
+            id: 1,
+            name: 'Order 1'
+          },
+          {
+            id: 2,
+            name: 'Order 2'
+          }
+        ]
+      }
+    };
+
+    return new Promise((resolve, reject) => {
+      if (
+        apiName === 'api/get-users'
+      ) {
+        return resolve(response.getUsers);
+      } else if (
+        apiName === 'api/get-orders'
+      ) {
+        return resolve(response.getOrders);
+      } else {
+        return reject(new Error('No response Found'));
+      }
+    });
+  }
+}));
+
+describe('ExampleComponent', () => {
+  // By passing the done function here, we’re telling Jest to wait until the done callback is 
+  // called before finishing the test. See Testing Asynchronous Code docs for more details.
+  it('fetches data from server when server returns a successful response', async (done) => {
+    // We invoke Enzyme to mount render, which also invokes the React lifecycle methods
+    
+    const onUsersLoaded = jest.fn();
+    const exampleComponent = mount(<ExampleComponent onUsersLoaded={onUsersLoaded} />);
+
+    // Press a button in the component which triggers get-users API request.
+    await exampleComponent
+        .find(Button)
+        .at(2)
+        .props()
+        .onClick();
+    // Wait for component to rerender
+    exampleComponent.update();
+
+    const expectedUsers = [
+        {
+          id: 1,
+          name: 'User 1'
+        },
+        {
+          id: 2,
+          name: 'User 2'
+        }
+     ];
+
+    // Wrapping our assertion code inside a process.nextTick() ensures that the functions 
+    // queued in the current event loop are completed, thus also ensuring that our Promises 
+    // and other code inside ExampleComponent is done executing.
+    process.nextTick(() => {
+      expect(onUsersLoaded).toHaveBeenCalledWith(expectedUsers);
+      // We invoke done to tell Jest that this test case is complete.
+      done();
+    });
+  });
+});
+```
+* Reference 
+    * https://medium.com/@rishabhsrao/mocking-and-testing-fetch-with-jest-c4d670e2e167
+    * https://jest-bot.github.io/jest/docs/asynchronous.html
