@@ -177,7 +177,47 @@ Keys help React identify which items have changed, are added, or are removed. Ke
 
 ## Testing
 
-### Mocking fetch with Jest
+#### Q - How to print HTML like string of the wrapper for debugging purposes using Enzyme?
+
+Following could be used to print out to the console when tests are not passing when you expect them to.
+```jsx harmony
+const wrapper = shallow(<Book title="Huckleberry Finn" />);
+console.log(wrapper.debug());
+```
+
+Below gets outputs to console
+```html
+<div>
+ <h1 className="title">Huckleberry Finn</h1>
+</div>
+```
+
+#### Q - How to force a re-render with enzyme?
+`.update()` could be used to force a re-render in component. Useful to run before checking the render output if something external may be updating the state of the component somewhere.
+
+NOTE: can only be called on a wrapper instance that is also the root instance.
+
+```jsx harmony
+class ImpureRender extends React.Component {
+  constructor(props) {
+    super(props);
+    this.count = 0;
+  }
+
+  render() {
+    this.count += 1;
+    return <div>{this.count}</div>;
+  }
+}
+```
+```jsx harmony
+const wrapper = shallow(<ImpureRender />);
+expect(wrapper.text()).to.equal('0');
+wrapper.update();
+expect(wrapper.text()).to.equal('1');
+```
+
+#### Q - How to mock fetch request with Jest
 
 ```jsx harmony
 import { mount } from 'enzyme';
