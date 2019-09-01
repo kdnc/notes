@@ -44,8 +44,19 @@ Reference - <https://help.github.com/articles/adding-an-existing-project-to-gith
 ---
 
 ## Clone branch
-    // Fetch all the branches and check out the specified branch name
-    git clone --branch master https://github.com/kdnc/notes.git
+
+#### Q - How to clone a branch?
+```
+// Fetch all the branches and check out the specified branch name
+git clone --branch master https://github.com/kdnc/notes.git
+```
+
+#### Q - How to clone a branch to a specific local folder?
+```
+// If you want to clone the repository into a directory named something other than 'notes' 
+// you can specify that as the next command-line option:
+git clone --branch master https://github.com/kdnc/notes.git notes-renamed
+```
 
 ---
 
