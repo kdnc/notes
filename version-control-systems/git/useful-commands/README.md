@@ -274,3 +274,55 @@ This may prompt you to do an confirmation for commit, once you successfully reba
 Following link contains more useful git commands
 
 Reference - <https://www.siteground.com/tutorials/git/commands.htm>
+
+#### Q - How to list the stash entries that you currently have?
+
+Below command lists the stash entries that you currently have. Each stash entry is listed with its name (e.g. **stash@{0}** is the latest entry, **stash@{1}** is the one before, etc.), the name of the branch that was current when the entry was made, and a short description of the commit the entry was based on.
+
+```bash
+git stash list
+```
+
+Output similar to the below will be displayed.
+
+```
+stash@{0}: WIP on submit: 6ebd0e2... Update git-stash documentation
+stash@{1}: On master: 9cc0589... Add git-stash
+```
+
+#### Q - How to apply the stash?
+
+The keys into the stash are actually the stash@{n} items on the left.
+
+```bash
+git stash apply stash@{0}
+```
+
+Since version 2.11, it's pretty easy, you can use the N stack number instead of using stash@{n}. So now instead of using:
+
+```bash
+git stash apply "stash@{n}"
+```
+
+You can type:
+
+```bash
+git stash apply n
+```
+
+e.g. 
+```bash
+git stash apply 1
+```
+
+Reference - https://stackoverflow.com/a/1910142
+
+In fact stash@{0} is a revision in git that you can switch to... but git stash apply ... should figure out how to DTRT to apply it to your current location.
+
+#### Q - How to apply the stash and remove it from the stash list?
+
+```bash
+git stash pop stash@{n}
+```
+
+Reference - https://stackoverflow.com/a/1910167
